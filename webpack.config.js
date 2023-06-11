@@ -14,7 +14,7 @@ module.exports = {
     path.join(__dirname, 'src', 'client', 'index.tsx')
   ].filter(Boolean),
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'build', 'static'),
     filename: 'bundle.[contenthash].js',
     clean: true,
     publicPath: '/'

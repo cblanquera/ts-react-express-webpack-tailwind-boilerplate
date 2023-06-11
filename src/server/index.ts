@@ -5,7 +5,8 @@ import express from 'express';
 dotenv.config();
 
 const app = express();
-app.use(express.static(path.resolve(__dirname, '..', 'build')));
+const build = path.resolve(process.cwd(), 'build', 'static');
+app.use(express.static(build));
 
 if (process.env.NODE_ENV === 'development') {
   const { dev, hot } = require('./develop');
@@ -13,7 +14,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+  res.sendFile(path.join(build, 'index.html'));
 });
 
 app.listen(3000, function () {

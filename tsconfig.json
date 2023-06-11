@@ -5,7 +5,7 @@
     "lib": ["es2021", "es7", "es6", "dom"],
     "module": "commonjs",
     "noUnusedLocals": true,
-    "outDir": "./dist/",
+    "outDir": "./build/",
     "preserveConstEnums": true,
     "resolveJsonModule": true,
     "removeComments": true,
@@ -16,5 +16,5 @@
     "jsx": "react-jsx"
   },
   "include": [ "src/**/*.ts", "src/**/*.tsx" ],
-  "exclude": ["test", "dist", "build", "node_modules"]
+  "exclude": ["build", "node_modules"]
 }
