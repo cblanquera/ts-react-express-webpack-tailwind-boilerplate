@@ -59,5 +59,8 @@ module.exports = {
   ].filter(Boolean),
   devServer: {
     hot: true,
+    historyApiFallback: {
+      index: '/'
+    }
   }
 };
